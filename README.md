@@ -26,7 +26,7 @@
 
 Personal Notes:
 1. to use jpa add: 
-	a. Add `spring.mvc.view.prefix` and `spring.mvc.view.prefix` in `application.properties`. 
-	b. Add `webapp` folder under `src/main/<as given in prefix>`
-	c. Add `tomcat-jasper` to pom.
-	d. Add `jstl` dependency too as it will be required after.
+	* Add `spring.mvc.view.prefix` and `spring.mvc.view.prefix` in `application.properties`. 
+ 	* Add `webapp` folder under `src/main/<as given in prefix>`
+	* Add `tomcat-jasper` to pom.
+	* Add `jstl` dependency too as it will be required after.
