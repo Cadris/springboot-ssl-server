@@ -6,7 +6,7 @@
 | ----------- | ----------- |
 | A api end pont  | Done   |
 |The end pont must take data from properties file| Done |
-|A jsp webpage at home| |
+|A jsp webpage at home| Done |
 |SSL to it||
 |Serve it through nginx||
 |Add H2 in memory database to application||

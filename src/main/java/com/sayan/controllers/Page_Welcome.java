@@ -2,18 +2,18 @@ package com.sayan.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.sayan.services.CustomLogger;
 import com.sayan.services.Global;
 
-@RestController
-@RequestMapping("/api")
-public class Rest_Welcome {
+@Controller
+@RequestMapping("/")
+public class Page_Welcome {
 	
 	@Value("${application.author.firstname}")
 	private String myFistName;
@@ -23,11 +23,15 @@ public class Rest_Welcome {
 	
 	@Autowired
 	CustomLogger logger;
-	
-	@GetMapping({ "/", "/welcome" })
-	public ResponseEntity<?> welcome() {
+
+	@GetMapping({"/", "/page"})
+	public String welcomePage(Model model) {
 		logger.log(Global.GET_REQUEST);
-		return new ResponseEntity<>("Hi From "+myFistName+" "+myLastName, HttpStatus.OK);
+		
+		model.addAttribute("myFirstName", this.myFistName);
+		model.addAttribute("myLastName", this.myLastName);
+		
+		return "welcome";
 	}
 	
 }
