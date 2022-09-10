@@ -21,3 +21,12 @@
 | [GET] | /api | All the api will come under this catagory |
 | [GET] | /api/ | This will display a Welcome a Welcome Message |
 | [GET] | /api/welcome | This will display a Welcome a Welcome Message |
+
+-----------------
+
+Personal Notes:
+1. to use jpa add: 
+	a. Add `spring.mvc.view.prefix` and `spring.mvc.view.prefix` in `application.properties`. 
+	b. Add `webapp` folder under `src/main/<as given in prefix>`
+	c. Add `tomcat-jasper` to pom.
+	d. Add `jstl` dependency too as it will be required after.
