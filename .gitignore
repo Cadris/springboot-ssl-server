@@ -1,3 +1,6 @@
+src/main/resources/keystore/sslserver.p12
+opensslcerts/
+
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
